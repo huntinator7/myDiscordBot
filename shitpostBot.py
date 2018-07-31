@@ -42,6 +42,9 @@ async def on_message(message):
     if "mods are gay" in newmessage:
         await shitposter.send_message(message.channel, "It is known")
 
+    if "kys" in newmessage:
+        await shitposter.send_message(message.channel, "no u")
+
 #@shitposter.event
 #async def on_reaction_add(reaction, user):
 #    if reaction.emoji.id == emoji.doubt:
