@@ -3,6 +3,8 @@ import asyncio
 import discord
 import re
 
+#This is a test for git bash
+
 #actual bot. use shitposter. whatever
 shitposter = discord.Client()
 regexShit = re.compile('(\w*)shitpost(\w*)', re.IGNORECASE)
