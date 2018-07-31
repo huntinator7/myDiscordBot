@@ -45,6 +45,9 @@ async def on_message(message):
     if "kys" in newmessage:
         await shitposter.send_message(message.channel, "no u")
 
+    if "donger" in newmessage:
+        await shitposter.send_message(message.channel, "( ͡° ͜ʖ ͡°)")
+
 #@shitposter.event
 #async def on_reaction_add(reaction, user):
 #    if reaction.emoji.id == emoji.doubt:
@@ -54,5 +57,5 @@ async def on_message(message):
     
 
 #connects code to bot
-shitposter.run('NDY1MDExODg0NjM1MTkzMzQ1.DiHT0Q.1WHrZHn18XMgW_1TPNf5WnqKrkA')
+shitposter.run('')
     
