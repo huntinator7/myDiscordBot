@@ -2,6 +2,7 @@
 import asyncio
 import discord
 import re
+import config as cfg
 
 #This is a test for git bash
 
@@ -57,5 +58,5 @@ async def on_message(message):
     
 
 #connects code to bot
-shitposter.run('')
+shitposter.run(cfg.discord['key'])
     
