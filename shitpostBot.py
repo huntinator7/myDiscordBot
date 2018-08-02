@@ -10,6 +10,7 @@ import config as cfg
 shitposter = discord.Client()
 regexShit = re.compile('(\w*)shitpost(\w*)', re.IGNORECASE)
 regexFun = re.compile('(\w*)funpost(\w*)', re.IGNORECASE)
+dongerLib = { 'lenny': '( ͡° ͜ʖ ͡°)' }
 
 #on ready
 @shitposter.event
@@ -45,9 +46,17 @@ async def on_message(message):
 
     if "kys" in newmessage:
         await shitposter.send_message(message.channel, "no u")
+    
+    if "!donger" in newmessage:
+        isDonger = True
 
-    for word in newmessage:
-        print(word)
+    if isDonger:
+        keyList = list(dongerLib.keys())
+        for i in keyList:
+            if keyList[i] in newmessage:
+                dongerDisplay = dongerLib.get(keyList[i])
+                break
+        await shitposter.send_message(message.channel, dongerDisplay)
 
 #@shitposter.event
 #async def on_reaction_add(reaction, user):
