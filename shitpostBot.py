@@ -12,7 +12,7 @@ regexShit = re.compile('(\w*)shitpost(\w*)', re.IGNORECASE)
 regexFun = re.compile('(\w*)funpost(\w*)', re.IGNORECASE)
 dongerLib = { 'lenny': '( ͡° ͜ʖ ͡°)' }
 isDonger = False
-dongerDisplay
+dongerDisplay = None
 
 #on ready
 @shitposter.event
