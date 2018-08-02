@@ -46,7 +46,7 @@ async def on_message(message):
     if "kys" in newmessage:
         await shitposter.send_message(message.channel, "no u")
 
-    for word in newmessage
+    for word in newmessage:
         if "!donger" == word:
             await shitposter.send_message(message.channel, "( ͡° ͜ʖ ͡°)")
 
