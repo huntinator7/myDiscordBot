@@ -47,8 +47,7 @@ async def on_message(message):
         await shitposter.send_message(message.channel, "no u")
 
     for word in newmessage:
-        if "donger" == word:
-            await shitposter.send_message(message.channel, "( ͡° ͜ʖ ͡°)")
+        print(word)
 
 #@shitposter.event
 #async def on_reaction_add(reaction, user):
