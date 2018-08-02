@@ -52,7 +52,7 @@ async def on_message(message):
 
     if isDonger:
         keyList = list(dongerLib.keys())
-        for i in keyList:
+        for i in range(len(keyList)):
             if keyList[i] in newmessage:
                 dongerDisplay = dongerLib.get(keyList[i])
                 break
