@@ -50,6 +50,10 @@ async def on_message(message):
     if "!donger" in newmessage:
         isDonger = True
 
+    if "I need a donger" in newmessage:
+        await shitposter.send_message(message.channel, "Well why didn't you ask me? I am currently compiling the best list of dongers to funpost with. I can give it to you right now. Say it every now and then so you know what dongers I have")
+        await shitposter.send_message(message.channel, list(dongerLib.keys()))
+
     if isDonger:
         keyList = list(dongerLib.keys())
         for i in range(len(keyList)):
