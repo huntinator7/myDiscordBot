@@ -12,6 +12,7 @@ regexShit = re.compile('(\w*)shitpost(\w*)', re.IGNORECASE)
 regexFun = re.compile('(\w*)funpost(\w*)', re.IGNORECASE)
 dongerLib = { 'lenny': '( ͡° ͜ʖ ͡°)' }
 isDonger = False
+dongerDisplay
 
 #on ready
 @shitposter.event
@@ -47,12 +48,14 @@ async def on_message(message):
 
     if "kys" in newmessage:
         await shitposter.send_message(message.channel, "no u")
-    
-    if "!donger" in newmessage:
-        isDonger = True
 
     if "I need a donger" in newmessage:
-        await shitposter.send_message(message.channel, "Well why didn't you ask me? I am currently compiling the best list of dongers to funpost with. I can give it to you right now. Say it every now and then so you know what dongers I have" + list(dongerLib.keys())
+        await shitposter.send_message(message.channel, "Well why didn't you ask me? I am currently compiling the best list of \
+        dongers to funpost with. I can give it to you right now. Say it every now and then so you know what dongers I have.\
+         Here is what I currently have: " + list(dongerLib.keys()))
+        
+    if "!donger" in newmessage:
+        isDonger = True
         
     if isDonger:
         keyList = list(dongerLib.keys())
@@ -60,7 +63,8 @@ async def on_message(message):
             if keyList[i] in newmessage:
                 dongerDisplay = dongerLib.get(keyList[i])
                 break
-        await shitposter.send_message(message.channel, dongerDisplay)
+        if dongerDisplay != None:
+            await shitposter.send_message(message.channel, dongerDisplay)
 
 #@shitposter.event
 #async def on_reaction_add(reaction, user):
