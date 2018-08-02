@@ -11,6 +11,7 @@ shitposter = discord.Client()
 regexShit = re.compile('(\w*)shitpost(\w*)', re.IGNORECASE)
 regexFun = re.compile('(\w*)funpost(\w*)', re.IGNORECASE)
 dongerLib = { 'lenny': '( ͡° ͜ʖ ͡°)' }
+isDonger = False
 
 #on ready
 @shitposter.event
@@ -53,7 +54,6 @@ async def on_message(message):
     if "I need a donger" in newmessage:
         await shitposter.send_message(message.channel, "Well why didn't you ask me? I am currently compiling the best list of dongers to funpost with. I can give it to you right now. Say it every now and then so you know what dongers I have" + list(dongerLib.keys())
         
-
     if isDonger:
         keyList = list(dongerLib.keys())
         for i in range(len(keyList)):
