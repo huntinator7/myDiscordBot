@@ -38,16 +38,16 @@ async def on_message(message):
 
     new_message = message.content.lower()
     if "a gift from the egg gods" in new_message:
-        await shitposter.send_message(message.channel, "PRAISE BE!")
+        await message.channel.send("PRAISE BE!")
 
     if regex_shit.search(message.content):
         test = regex_shit.search(message.content)
         newstr = '{0}funpost{1}'.format(test.group(1), test.group(2))
-        await shitposter.send_message(message.channel, "LANGUAGE. It's " + newstr)
+        await message.channel.send("LANGUAGE. It's " + newstr)
 
     for key, value in lookup_table.items():
         if key in new_message:
-            await shitposter.send_message(message.channel, value)
+            await message.channel.send(value)
 
     if "!donger" in new_message:
         global is_donger
@@ -60,13 +60,13 @@ async def on_message(message):
                 donger_display = donger_lib.get(keyList[i])
                 break
         if donger_display != None:
-            await shitposter.send_message(message.channel, donger_display)
+            await message.channel.send(donger_display)
 
 
 # @shitposter.event
 # async def on_reaction_add(reaction, user):
 #    if reaction.emoji.id == emoji.doubt:
-#        await shitposter.send_message(message.channel, "The statement has been doubted!")
+#        await message.channel.send("The statement has been doubted!")
 
 
 # connects code to bot
